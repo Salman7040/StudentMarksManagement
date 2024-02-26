@@ -1,0 +1,145 @@
+
+table {
+  position: absolute;
+  top: 25%;
+  left: 30%;
+  border: 2px solid rgb(227, 225, 225);
+  box-shadow: 3px 3px 5px black;
+  width: auto;
+}
+tr:nth-child(even) {
+  background-color: rgb(228, 220, 220);
+}
+
+th,
+tr,
+td {
+  padding: 0 5px;
+  font-size: 30px;
+  height: 100%;
+  text-align: center;
+  border: 2px solid gray;
+}
+.bdrNone{
+  border: none;
+}
+button {
+  background-color: rgb(113, 228, 113);
+  font-weight: 900;
+  height: 40px;
+  width: 60px;
+}
+
+.spbtn {
+  background-color: rgb(166, 164, 164);
+  border: 1px solid gray;
+
+}
+
+.addNew {
+  font-weight: 900;
+  border: none;
+  background-color: rgb(166, 164, 164);
+}
+
+.rm button {
+  width: 70px;
+  background: linear-gradient(to left, rgb(255, 83, 83), rgb(245, 124, 124), rgb(250, 168, 168));
+  padding: 0 2px;
+}
+
+.rm button:active {
+  background: linear-gradient(to right, rgb(244, 50, 50), rgb(249, 97, 97), rgb(250, 168, 168));
+}
+
+td button {
+  border-radius: 10px solid gray;
+}
+
+.rm,
+.ed {
+
+  border: none;
+  width: auto;
+  height: 40px;
+}
+
+/* form Design logic */
+
+form {
+  margin-top: 10%;
+  margin-left: 3%;
+  display: flex;
+  gap: 10px;
+  height: 40px;
+  width: 100%;
+}
+
+form button {
+  padding: 0 8px;
+  height: 42px;
+  width: auto;
+  font-size: 20px;
+  border-radius: 10px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+form .min {
+  text-align: center;
+  width: 60px;
+  font-size: 20px;
+}
+
+form input::placeholder {
+  color: rgb(159, 158, 158);
+}
+
+form input {
+  padding: 0 8px;
+  outline: none;
+  border: 1px solid rgb(186, 186, 186);
+  border-radius: 10px;
+  font-weight: 700;
+  height: 100%;
+  font-size: 20px;
+}
+
+.filtering{
+
+  position: absolute;
+  left: 51.5%;
+  top: 19%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 150px;
+  height: 50px;
+
+}
+.filtering input {
+  outline: none;
+  border: 2px solid rgb(228, 224, 224);
+  border-radius: 10px;
+  padding: 0 10px;
+  text-align: center;
+  height: 37px;
+  font-weight: 900;
+  font-size: 18px;
+  width: 50px;
+}
+
+.filtering button{
+  border-radius: 10px;
+  border: none;
+  background-color: rgb(208, 206, 206);
+  color: rgb(55, 55, 55);
+}

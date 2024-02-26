@@ -1,0 +1,51 @@
+<form #formDate="ngForm" (ngSubmit)="sendDate(formDate)" autocomplete="off" *ngIf="display">
+  <input ngModel type="text" name="FirstName" placeholder="First Name">
+  <input ngModel type="text" name="LastName" placeholder="Last Name">
+  <input ngModel type="number" name="stdClass" placeholder="Class" class="min">
+  <input ngModel type="number" name="stdmraks" placeholder="Marks" class="min">
+  <button (submit)="sendDate(formDate)">ADD</button>
+</form>
+
+<form #updDate="ngForm" (ngSubmit)="UpdateDate(updDate)" autocomplete="off" *ngIf="updateDisplay">
+  <input [(ngModel)]="f_name" type="text" name="fName" placeholder="First Name">
+  <input [(ngModel)]="l_name" type="text" name="lName" placeholder="Last Name">
+  <input [(ngModel)]="s_class" type="number" name="sClass" placeholder="Class" class="min">
+  <input [(ngModel)]="s_marks" type="number" name="sMraks" placeholder="Marks" class="min">
+  <button type="submit">Update</button>
+
+</form>
+
+<table>
+  <tr>
+    <th>Sr.No</th>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Class<i class="ri-filter-line" style="font-size: 90%; color: rgb(49, 49, 49);" (click)="filterOpen()"></i></th>
+    <th>Mark's</th>
+    <th colspan="2" class="spbtn"> <button class="addNew" (click)="visibilityTrue()">New</button></th>
+  </tr>
+
+  <ng-container *ngFor="let std of stdDetailCopi; index as i ">
+    <tr>
+      <td [width]="10"><strong>{{i+1}}</strong></td>
+      <td>{{std.firstName}}</td>
+      <td>{{std.lastName}} </td>
+      <td [width]="10">{{std.class}}</td>
+      <td [width]="20">{{std.marks}}</td>
+      <td class="ed"><button (click)="edit(i)">Edit</button></td>
+      <td class="rm"><button (click)="remove(i)">Remove</button></td>
+    </tr>
+  </ng-container>
+  <td class="bdrNone"></td>
+  <td class="bdrNone"></td>
+  <td class="bdrNone"></td>
+  <td class="bdrNone"></td>
+  <td>Total:{{stdMarks}}</td>
+</table>
+
+
+<div class="filtering" *ngIf="filterDisplay">
+  <input [(ngModel)]="filteringValue" type="number" placeholder="Range">
+  <button (click)="filterNow()">filter</button>
+
+</div>
